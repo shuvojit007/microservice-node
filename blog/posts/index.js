@@ -3,13 +3,14 @@ const bodyParser = require("body-parser");
 const { randomBytes } = require("crypto");
 const cors = require('cors');
 const axios = require("axios");
-const { reset } = require("nodemon");
+
+
 const app = express();
 app.use(bodyParser.json());
 app.use(cors());
+
+
 const posts = {};
-
-
 
 app.get("/posts", (req, res) => {
   res.send(posts);
